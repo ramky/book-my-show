@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: book-my-show-app-deployment
+  labels:
+    app: book-my-show-app
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      name: book-my-show-app-pod
+      app: book-my-show-app
+  template:
+    metadata:
+      name: book-my-show-app-pod
+      labels:
+        name: book-my-show-app-pod
+        app: book-my-show-app
+    spec:
+      containers:
+        - name: book-my-show-app
+          image: ramky/book_my_show
