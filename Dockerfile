@@ -34,7 +34,7 @@ RUN curl -sL https://deb.nodesource.com/setup_${NODE_MAJOR_VERSION}.x | bash - \
 
 
 # install specific bundler version
-ARG BUNDLER_VERSION=1.17.1
+ARG BUNDLER_VERSION=2.2.16
 RUN gem install bundler -v "${BUNDLER_VERSION}"
 
 # install gems
