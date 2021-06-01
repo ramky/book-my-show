@@ -43,7 +43,7 @@ COPY Gemfile* ./
 RUN bundle install --without ${BUNDLE_WITHOUT}
 
 # install node modules
-# COPY package.json yarn.lock ./
+COPY package.json yarn.lock ./
 
 # copy code
 COPY . .
