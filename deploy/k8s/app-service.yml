@@ -6,7 +6,7 @@ metadata:
     name: book-my-show-service
     app: book-my-show-app
 spec:
-  type: LoadBalancer
+  type: NodePort
   ports:
    - port: 80
      targetPort: 3000
