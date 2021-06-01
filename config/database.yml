@@ -12,6 +12,7 @@ test:
 
 production:
   <<: *default
+  host: db
   database: book-my-show_production
   username: postgres
   password: <%= ENV['BOOK-MY-SHOW_DATABASE_PASSWORD'] %>
