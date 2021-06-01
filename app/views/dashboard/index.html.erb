@@ -1,0 +1,35 @@
+<h1>Book My Show</h1>
+<h3>Movies</h3>
+<% @movies.each do |movie| %>
+<p>Name: <%= movie.name %></p>
+<p>Description: <%= movie.desc %></p>
+<p>Location: <%= movie.location %></p>
+<p>Date Time: <%= movie.show_dt_time %></p>
+<hr />
+<% end %>
+<h3>Events</h3>
+<% @events.each do |event| %>
+<p>Name: <%= event.name %></p>
+<p>Description: <%= event.desc %></p>
+<p>Location: <%= event.location %></p>
+<p>Date Time: <%= event.show_dt_time %></p>
+<hr />
+<% end %>
+
+<h3>Plays</h3>
+<% @plays.each do |play| %>
+<p>Name: <%= play.name %></p>
+<p>Description: <%= play.desc %></p>
+<p>Location: <%= play.location %></p>
+<p>Date Time: <%= play.show_dt_time %></p>
+<hr />
+<% end %>
+
+<h3>Sports</h3>
+<% @sports.each do |sport| %>
+<p>Name: <%= sport.name %></p>
+<p>Description: <%= sport.desc %></p>
+<p>Location: <%= sport.location %></p>
+<p>Date Time: <%= sport.show_dt_time %></p>
+<hr />
+<% end %>

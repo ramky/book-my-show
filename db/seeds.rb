@@ -1,5 +1,5 @@
 # Create 5 shows for each show type
-%w[movies, events, plays, sports].each do |show|
+%w[movies events plays sports].each do |show|
   5.times do
     Show.create(
       name: Faker::Lorem.sentence(word_count: 3),
