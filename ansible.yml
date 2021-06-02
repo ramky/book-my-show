@@ -4,7 +4,7 @@
     copy:
       src: deploy/k8s/
       dest: /home/riyer_sl/deploy/
-  - name: delete the previous of kubernetes objects
-    command: kubectl delete -f /home/riyer_sl/deploy/
+  # - name: delete the previous of kubernetes objects
+  #   command: kubectl delete -f /home/riyer_sl/deploy/
   - name: Create a Deployment by reading the definition from a local file
     command: kubectl apply -f /home/riyer_sl/deploy/
