@@ -1,2 +1,2 @@
-[master-node]
-34.74.194.129 ansible_user=deployer
+[master_node]
+34.74.194.129
