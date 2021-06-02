@@ -3,8 +3,8 @@
   - name: copy deployment file to kubernetes master
     copy:
       src: deploy/k8s/
-      dest: /root/
+      dest: /home/ansible_user
   - name: delete the previous of kubernetes objects
-    command: kubectl delete -f /root/
+    command: kubectl delete -f /home/ansible_user
   - name: Create a Deployment by reading the definition from a local file
-    command: kubectl apply -f /root/
+    command: kubectl apply -f /home/ansible_user
