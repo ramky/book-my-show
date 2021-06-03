@@ -19,4 +19,4 @@ spec:
     spec:
       containers:
         - name: book-my-show-app
-          image: ramky/book_my_show
+          image: ramky/book_my_show:build_number
