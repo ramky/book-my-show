@@ -1,6 +1,6 @@
 # Compile the assets
+rake db:exists && rake db:migrate || rake db:setup
 bundle exec rake assets:precompile
-bundle exec rail db:migrate
 
 # Start the server
 bundle exec rails server
