@@ -45,5 +45,11 @@ pipeline {
                 ansiblePlaybook credentialsId: 'riyer_sl', disableHostKeyChecking: true, installation: 'ansible2', inventory: 'prod.inv', playbook: 'ansible.yml'
             }
         }
+
+        stage('Cleaning up') {
+          steps{
+            sh "docker rmi $registry:$BUILD_NUMBER"
+          }
+        }
     }
 }
