@@ -51,4 +51,4 @@ COPY . .
 
 ARG RAILS_ENV=production
 ENV RAILS_ENV ${RAILS_ENV}
-ENTRYPOINT ./entrypoint.sh
+ENTRYPOINT ./entrypoint.prod.sh
