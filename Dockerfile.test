@@ -46,6 +46,6 @@ COPY package.json yarn.lock ./
 # copy code
 COPY . .
 
-ARG RAILS_ENV=production
+ARG RAILS_ENV=test
 ENV RAILS_ENV ${RAILS_ENV}
 ENTRYPOINT ./entrypoint.test.sh
