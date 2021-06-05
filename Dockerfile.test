@@ -25,7 +25,6 @@ RUN curl -sL https://deb.nodesource.com/setup_${NODE_MAJOR_VERSION}.x | bash - \
   libxslt-dev \
   nodejs \
   openssh-client \
-  postgresql-client \
   sqlite3 libsqlite3-dev \
   unzip \
   zlib1g-dev \
