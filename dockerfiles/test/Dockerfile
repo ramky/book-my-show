@@ -37,7 +37,7 @@ ARG BUNDLER_VERSION=1.17.1
 RUN gem install bundler -v "${BUNDLER_VERSION}"
 
 # install gems
-# COPY ../../Gemfile* ./
+COPY ./Gemfile* ./
 RUN bundle install
 
 # install node modules
