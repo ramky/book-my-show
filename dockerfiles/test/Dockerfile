@@ -32,21 +32,19 @@ RUN curl -sL https://deb.nodesource.com/setup_${NODE_MAJOR_VERSION}.x | bash - \
   && rm -rf /var/lib/apt/lists/* \
   && apt-get clean
 
-
-
 # install specific bundler version
 ARG BUNDLER_VERSION=1.17.1
 RUN gem install bundler -v "${BUNDLER_VERSION}"
 
 # install gems
-COPY Gemfile* ./
+COPY ../../Gemfile* ./
 RUN bundle install
 
 # install node modules
-COPY package.json yarn.lock ./
+# COPY package.json yarn.lock ./
 
 # copy code
-COPY . .
+COPY ../../ .
 
 ARG RAILS_ENV=production
 ENV RAILS_ENV ${RAILS_ENV}
