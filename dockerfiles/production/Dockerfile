@@ -39,10 +39,9 @@ ARG BUNDLER_VERSION=1.17.1
 RUN gem install bundler -v "${BUNDLER_VERSION}"
 
 # install gems
-# ARG BUNDLE_WITHOUT="development test"
+ARG BUNDLE_WITHOUT="development test"
 COPY Gemfile* ./
-# RUN bundle install --without ${BUNDLE_WITHOUT}
-RUN bundle install
+RUN bundle install --without ${BUNDLE_WITHOUT}
 
 # install node modules
 COPY package.json yarn.lock ./
