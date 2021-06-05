@@ -26,6 +26,7 @@ RUN curl -sL https://deb.nodesource.com/setup_${NODE_MAJOR_VERSION}.x | bash - \
   nodejs \
   openssh-client \
   postgresql-client \
+  sqlite3 libsqlite3-dev \
   unzip \
   zlib1g-dev \
   && rm -rf /var/lib/apt/lists/* \
@@ -38,9 +39,10 @@ ARG BUNDLER_VERSION=1.17.1
 RUN gem install bundler -v "${BUNDLER_VERSION}"
 
 # install gems
-ARG BUNDLE_WITHOUT="development test"
+# ARG BUNDLE_WITHOUT="development test"
 COPY Gemfile* ./
-RUN bundle install --without ${BUNDLE_WITHOUT}
+# RUN bundle install --without ${BUNDLE_WITHOUT}
+RUN bundle install
 
 # install node modules
 COPY package.json yarn.lock ./
